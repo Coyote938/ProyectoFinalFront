@@ -1,0 +1,29 @@
+<div class="container-fluid">
+  <button
+    click.trigger="RegisterTaskPage()"
+    class="btn btn-outline-success btn-lg btn-block"
+  >
+    Crear
+  </button>
+  <div class="row">
+      <div repeat.for="task of data" class="card text-white bg-dark mb-3 col-sm-6 mr-10" style="max-width: 18rem;">
+        <div class="card-header">${task.tarea}</div>
+        <div class="card-body">
+          <h5 class="card-title">${task.descripcion}</h5>
+          <p class="card-text">Prioridad: ${task.prioridad}</p>
+          <button
+              class="btn btn-info"
+              click.trigger="EditPage(task.id)"
+            >
+              <i class="fa-solid fa-trash-xmark"></i>Editar
+            </button>
+            <button
+              class="btn btn-danger"
+              click.trigger="deleteTask(task.id)"
+            >
+              Eliminar
+            </button>
+      </div>
+      </div>
+  </div>
+</div>

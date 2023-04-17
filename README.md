@@ -1,4 +1,4 @@
-# tareas-app-front
+# tareas-app
 
 This project is bootstrapped by [aurelia/new](https://github.com/aurelia/new).
 

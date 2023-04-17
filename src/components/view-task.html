@@ -1,0 +1,46 @@
+<div class="container-fluid col-sm-5">
+    <form>
+      <div class="form-group text-white">
+        <div
+          if.bind="error"
+          class="bg-red-400 py-2 px-4 rounded-2xl flex justify-between opacity-30"
+          style="width: -webkit-fill-available"
+        >
+          <p class="text-white">Error: Ingrese todos los parametros</p>
+          <button class="font-bold text-white" click.trigger="closeAlert()">
+            X
+          </button>
+        </div>
+        <input
+          class="form-control-plaintext text-white"
+          type="text"
+          placeholder="Ingrese tarea"
+          value.bind="tarea"
+        />
+        <textarea
+          class="form-control-plaintext text-white"
+          type="text"
+          placeholder="Ingrese descripción"
+          value.bind="descripcion"
+        ></textarea>
+        <select class="custom-select" value.bind="prioridad" name="prioridad">
+          <option>Seleccione una prioridad</option>
+          <option value="Alta">Alta</option>
+          <option value="Media">Media</option>
+          <option value="Baja" >Baja</option>
+        </select>
+      </div>
+        <button
+          class="btn btn-success btn-lg btn-block"
+          click.trigger="updateTask()"
+        >
+          Guardar
+        </button>
+        <button
+          class="btn btn-secondary btn-lg btn-block"
+          click.trigger="HomePage()"
+        >
+          Volver
+        </button>
+    </form>
+</div>
